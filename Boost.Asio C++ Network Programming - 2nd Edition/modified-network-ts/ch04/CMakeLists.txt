@@ -18,3 +18,12 @@ target_link_libraries(ex07_removework ws2_32)
 
 add_executable(ex08_multithreads ex08_multithreads.cpp)
 target_link_libraries(ex08_multithreads ws2_32)
+
+add_executable(ex09_uncalledbind ex09_uncalledbind.cpp)
+add_executable(ex10_calledbind ex10_calledbind.cpp)
+add_executable(ex11_argumentbind ex11_argumentbind.cpp)
+add_executable(ex12_signaturebind ex12_signaturebind.cpp)
+add_executable(ex13_classbind ex13_classbind.cpp)
+
+add_executable(ex14_iocontextbind ex14_iocontextbind.cpp)
+target_link_libraries(ex14_iocontextbind ws2_32)
