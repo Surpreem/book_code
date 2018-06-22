@@ -27,3 +27,12 @@ add_executable(ex13_classbind ex13_classbind.cpp)
 
 add_executable(ex14_iocontextbind ex14_iocontextbind.cpp)
 target_link_libraries(ex14_iocontextbind ws2_32)
+
+add_executable(ex15_mutexbind ex15_mutexbind.cpp)
+target_link_libraries(ex15_mutexbind ws2_32)
+
+add_executable(ex16_post ex16_post.cpp)
+target_link_libraries(ex16_post ws2_32)
+
+add_executable(ex17_dispatch ex17_dispatch.cpp)
+target_link_libraries(ex17_dispatch ws2_32)

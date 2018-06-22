@@ -1,16 +1,25 @@
-#include <functional>
 #include <iostream>
 #include <memory>
+#include <mutex>
 #include <thread>
+#include <vector>
 
 #include "asio.hpp"
 
 
+std::mutex global_stream_lock;
+
 void worker_thread(std::shared_ptr<asio::io_context> io_context, int counter)
 {
+    global_stream_lock.lock();
     std::cout << counter << ".\n";
+    global_stream_lock.unlock();
+
     io_context->run();
+
+    global_stream_lock.lock();
     std::cout << "End.\n";
+    global_stream_lock.unlock();
 }
 
 
